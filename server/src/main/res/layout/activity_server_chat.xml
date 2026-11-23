@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Server Header Info -->
+    <TextView
+        android:id="@+id/tvServerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Server 聊天室控制台"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvServerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IP: 正在取得... | Port: -- | 在線人數: 0"
+        android:textColor="#555555"
+        android:textSize="13sp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Chat Logs -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvChatLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textIsSelectable="true" />
+    </ScrollView>
+
+    <!-- Bottom Message Input Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="輸入廣播訊息..."
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="廣播"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStopServer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="關閉 Server 並返回"
+        android:backgroundTint="#D32F2F"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
